@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Satellite } from "lucide-react";
+import { ArrowRight, Satellite, Upload } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
@@ -43,15 +43,18 @@ const Hero = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-          <Link to="/signup">
+          <Link to="/upload">
             <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg group">
-              Get Started
-              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+              Upload Images
+              <Upload className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/60 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300">
-            View Research
-          </Button>
+          <Link to="/signup">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/60 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-300">
+              Get Started
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
