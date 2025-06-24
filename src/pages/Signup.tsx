@@ -66,27 +66,27 @@ const Signup = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center p-3 sm:p-4 lg:p-8">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 sm:w-96 sm:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-64 h-64 sm:w-96 sm:h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-32 h-32 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-32 h-32 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
+      <div className="relative z-10 w-full max-w-sm mx-auto">
         {/* Logo/Header */}
         <div className="text-center mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-teal-500 rounded-xl flex items-center justify-center">
-              <Satellite className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-purple-500 to-teal-500 rounded-xl flex items-center justify-center">
+              <Satellite className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
             </div>
-            <h1 className="text-xl sm:text-2xl font-bold text-white">SuperRes</h1>
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">SuperRes</h1>
           </div>
-          <p className="text-white/70 text-sm sm:text-base">Join the future of satellite imaging</p>
+          <p className="text-white/70 text-sm sm:text-base px-2">Join the future of satellite imaging</p>
         </div>
 
         {/* Signup Form */}
-        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl">
           <div className="mb-4 sm:mb-6">
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-1 sm:mb-2">Create Account</h2>
             <p className="text-white/60 text-xs sm:text-sm">Start enhancing satellite imagery today</p>
@@ -168,7 +168,7 @@ const Signup = () => {
 
           {/* Terms */}
           <div className="mt-3 sm:mt-4 text-center">
-            <p className="text-white/40 text-xs">
+            <p className="text-white/40 text-xs px-2">
               By creating an account, you agree to enhance responsibly
             </p>
           </div>
@@ -193,7 +193,7 @@ const Signup = () => {
 
         {/* Footer */}
         <div className="text-center mt-4 sm:mt-6">
-          <p className="text-white/40 text-xs">
+          <p className="text-white/40 text-xs px-2">
             Join thousands of researchers worldwide
           </p>
         </div>
