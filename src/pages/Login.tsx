@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Eye, EyeOff, Satellite, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/contexts/AuthContent";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,6 +14,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,8 +35,8 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         
-        // Store the token in localStorage for now
-        localStorage.setItem("token", data.token);
+        // Use auth context to handle login
+        login(data.token);
         
         toast({
           title: "Login Successful! 🎉",
