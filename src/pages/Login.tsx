@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Eye, EyeOff, Satellite, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import { useAuth } from "@/contexts/AuthContent";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
