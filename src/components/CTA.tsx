@@ -1,11 +1,13 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, FileText, Mail } from "lucide-react";
 
 const CTA = () => {
+  const handleGitHubClick = () => {
+    window.open("https://github.com/SachinPrasanth777/Super-Vision", "_blank");
+  };
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 relative">
-      {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
@@ -32,13 +34,16 @@ const CTA = () => {
           </div>
         </div>
         
-        {/* Resource Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300 group">
             <Github className="w-10 h-10 sm:w-12 sm:h-12 text-white mx-auto mb-4 group-hover:scale-110 transition-transform" />
             <h3 className="text-lg font-semibold text-white mb-2">Open Source</h3>
             <p className="text-white/70 text-sm mb-4">Access our codebase and contribute to the community</p>
-            <Button variant="ghost" className="text-teal-400 hover:text-teal-300 hover:bg-teal-400/10 w-full sm:w-auto">
+            <Button 
+              variant="ghost" 
+              className="text-teal-400 hover:text-teal-300 hover:bg-teal-400/10 w-full sm:w-auto"
+              onClick={handleGitHubClick}
+            >
               View on GitHub
             </Button>
           </div>
@@ -62,7 +67,6 @@ const CTA = () => {
           </div>
         </div>
         
-        {/* Footer */}
         <div className="text-center mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10 px-4">
           <p className="text-white/50 text-xs sm:text-sm">
             © 2025 Sachin Prasanth
