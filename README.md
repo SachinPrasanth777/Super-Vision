@@ -142,6 +142,16 @@ graph TB
 
 ---
 
+## 🚀 Key Features
+
+- **🎯 Dual-Stage Processing**: Super-resolution followed by object detection
+- **📱 User-Friendly Interface**: React-based web application
+- **🔒 Secure Authentication**: JWT-based user management
+- **⚡ Real-time Processing**: FastAPI backend for efficient inference
+- **📊 Comprehensive Results**: Oriented bounding boxes with confidence scores
+- **💾 Data Persistence**: MongoDB storage for user data and results
+
+---
 
 ## 🎯 Performance Benefits
 
@@ -176,6 +186,51 @@ This project demonstrates the effectiveness of combining super-resolution with o
 
 - **Satellite Image Analysis**: Better object identification in low-resolution imagery
 - **Enhanced Image for Warfare Systems**: Better Object Detection for drone based cameras during War Situations
+
+---
+
+## 📸 Screenshots
+
+### System Interface
+![WhatsApp Image 2025-07-05 at 12 16 37](https://github.com/user-attachments/assets/3a889bcc-9ee8-4c32-aa21-a254a0ae88b6)
+
+
+
+---
+
+## 📚 References & Citations
+
+This project builds upon the following research and datasets:
+
+### **Models & Frameworks**
+
+1. **SRGAN (Super-Resolution GAN)**
+   - Ledig, C., Theis, L., Huszár, F., Caballero, J., Cunningham, A., Acosta, A., ... & Shi, W. (2017). 
+   - *Photo-realistic single image super-resolution using a generative adversarial network.* 
+   - Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 4681-4690).
+   - [Paper](https://arxiv.org/abs/1609.04802)
+
+2. **YOLOv8 - Oriented Bounding Boxes (OBB)**
+   - Jocher, G., Chaurasia, A., & Qiu, J. (2023). 
+   - *YOLO by Ultralytics.* 
+   - [GitHub Repository](https://github.com/ultralytics/ultralytics)
+   - [Documentation](https://docs.ultralytics.com/)
+
+### **Dataset**
+
+3. **DOTA v2.0 Dataset**
+   - Ding, J., Xue, N., Xia, G. S., Bai, X., Yang, W., Yang, M., ... & Van Gool, L. (2022). 
+   - *Object detection in aerial images: A large-scale benchmark and challenges.* 
+   - IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(11), 7778-7796.
+   - [Paper](https://arxiv.org/abs/2102.12219) | [Dataset](https://captain-whu.github.io/DOTA/index.html)
+
+### **Additional Resources**
+
+- **FastAPI**: [https://fastapi.tiangolo.com/](https://fastapi.tiangolo.com/)
+- **React.js**: [https://reactjs.org/](https://reactjs.org/)
+- **MongoDB**: [https://www.mongodb.com/](https://www.mongodb.com/)
+
+---
 
 ## ⚙️ Installation
 
