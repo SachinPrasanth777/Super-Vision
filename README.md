@@ -176,3 +176,44 @@ This project demonstrates the effectiveness of combining super-resolution with o
 
 - **Satellite Image Analysis**: Better object identification in low-resolution imagery
 - **Enhanced Image for Warfare Systems**: Better Object Detection for drone based cameras during War Situations
+
+## ⚙️ Installation
+
+1. Clone the repository
+```bash
+https://github.com/SachinPrasanth777/Super-Vision.git
+cd Super-Vision
+```
+
+2. Run the client
+```bash
+bun i
+bun run dev
+```
+
+3. Run the Server
+```bash
+cd server
+pnpm i
+pnpm dev
+```
+
+## ⚙️ Environment Configuration for Server
+
+Create a `.env` file in your project root directory with the following variables:
+
+### `.env.example`
+
+```bash
+PORT="Default Port"
+NODE_ENV="development or production"
+MONGODB_URI="mongodb://localhost:27017/mydatabase"
+JWT_SECRET="jwtsecret"
+```
+
+4. Run the FastAPI Server
+```bash
+cd models
+pnpm i
+pnpm dev
+```
