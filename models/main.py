@@ -21,12 +21,38 @@ app.add_middleware(
 os.makedirs("temp", exist_ok=True)
 
 
-def super_res_and_predict(input_path, scale="2x"):
-    client = Client("doevent/Face-Real-ESRGAN")
-    result = client.predict(
-        image=handle_file(input_path), size=scale, api_name="/predict"
-    )
-    sr_image = Image.open(result)
+def super_res_and_predict(input_path, scale="4"):
+    try:
+        client = Client("Nick088/Real-ESRGAN_Pytorch")
+        result = client.predict(
+            img=handle_file(input_path), size_modifier=scale, api_name="/predict"
+        )
+
+        if result and os.path.exists(result):
+            original_img = Image.open(input_path)
+            enhanced_img = Image.open(result)
+
+            original_size = original_img.size
+            enhanced_size = enhanced_img.size
+
+            if (
+                enhanced_size[0] > original_size[0]
+                and enhanced_size[1] > original_size[1]
+            ):
+                sr_image = enhanced_img
+            else:
+                sr_image = original_img
+        else:
+            sr_image = Image.open(input_path)
+
+    except Exception as e:
+        error_msg = str(e)
+        if "exceeded your GPU quota" in error_msg or "quota" in error_msg.lower():
+            print("GPU quota exceeded - using original image")
+        else:
+            print(f"Error during enhancement: {e}")
+        sr_image = Image.open(input_path)
+
     model = YOLO("yolov8n-obb.pt")
     results = model(sr_image)
     rendered = results[0].plot()
