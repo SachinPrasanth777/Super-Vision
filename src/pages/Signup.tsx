@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,7 +18,7 @@ const Signup = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8000/users/signup", {
+      const response = await fetch("https://express-deployment-l56z.onrender.com/users/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
